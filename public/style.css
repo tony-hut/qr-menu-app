@@ -7,19 +7,28 @@
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
   }
 
   .container {
-    background-color: white;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 1);
     text-align: center;
     width: 350px;
+    color: #f7f7f7;
   }
 
   h1 {
-    color: #254F22;
+    color: #eaf1ea;
     margin-bottom: 20px;
   }
 
@@ -43,7 +52,7 @@
   button {
     width: 100%;
     padding: 12px;
-    background-color: #F5824A;
+    background-color: #b64416;
     color: white;
     border: none;
     border-radius: 8px;
@@ -54,8 +63,8 @@
   }
 
   button:hover {
-    background-color: #A03A13;
-    transform: translateY(-2px);
+    background-color: #F5824A;
+    transform: translateY(-3px);
   }
 
   .color-picker {
@@ -79,7 +88,7 @@
 
   input[type="color"]::-webkit-color-swatch {
     border-radius: 50%;
-    border: 10px solid #eeca47;
+    border: 5px solid #ffffff;
     box-shadow: 0 0 5px rgba(0,0,0,0.3);
     transition: all 0.3s ease;
   }
