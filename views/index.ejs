@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Generator</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>QR Generator</h1>
+
+        <% if (qrCode) { %>
+            
+            <div class="result">
+                <img src="<%= qrCode %>" alt="QR Code" style="width: 200px; margin: 20px 0; border-radius: 10px;">
+                <br>
+                <a href="/">
+                    <button>Створити ще один</button>
+                </a>
+            </div>
+
+        <% } else { %>
+
+            <form action="/" method="POST">
+                <input type="text" name="url" placeholder="Введи сюди посилання" required>
+                
+                <div class="color-picker">
+                    <label for="color">Виберіть колір:</label>
+                    <input type="color" id="color" name="color" value="#000000">
+                </div>
+
+                <button type="submit">Зробити QR</button>
+            </form>
+
+        <% } %>
+    </div>
+</body>
+</html>
