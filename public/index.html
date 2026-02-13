@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class ="container">
+    <h1>QR Generator</h1>
+      <form action="/submit" method="POST">
+        <input
+          type="url"
+          name="url"
+          placeholder="Введи сюди посилання"
+          required
+        />
+        <div class="color-picker">
+          <label for="color">Виберіть колір коду:</label>
+          <input type="color" id="color" name="color" value="#000000">
+        </div>
+        <button type="submit">Зробити QR</button>
+      </form>
+    </div>
+  </body>
+</html>
